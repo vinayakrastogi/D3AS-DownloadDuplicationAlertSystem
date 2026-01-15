@@ -38,10 +38,6 @@ openssl rand -base64 32
 -join ((48..57) + (65..90) + (97..122) | Get-Random -Count 32 | % {[char]$_})
 ```
 
-**Or use this generated one:**
-```
-fFcXCCSkd+IOl+8dR2JZs/zQKKMizsV0oJ9Ov42zzMs=
-```
 
 ## Easy Setup (3 Steps)
 
@@ -55,7 +51,7 @@ touch .env
 ```env
 PORT=5000
 MONGODB_URI=mongodb://localhost:27017/d3as
-SESSION_SECRET=fFcXCCSkd+IOl+8dR2JZs/zQKKMizsV0oJ9Ov42zzMs=
+SESSION_SECRET=generated-secret-key
 ```
 
 ### Step 3: Make sure MongoDB is running
